@@ -1,0 +1,23 @@
+# App configurations
+server:
+ port: 3000
+
+# H2 Database configurations
+#spring.datasource.url=jdbc:h2:mem:currencyexchangedb
+spring:
+ datasource:
+  url:jdbc:h2:file:~/database/currencyexchangedb
+ mvc:
+  pathmatch:
+   matching-strategy: ant_path_matcher
+
+logging:
+ level:
+  betvictor.project.shivani.shah.exchangeratechallenge: DEBUG
+  
+api:
+ host:
+  baseurl: https://api.exchangerate.host
+
+config:
+  api.delay.allowed.in.minutes: 2
